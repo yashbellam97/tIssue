@@ -23,6 +23,10 @@ const projectSchema = mongoose.Schema({
     members: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
+    }],
+    issues: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Issue"
     }]
 }, { timestamps: true });
 
