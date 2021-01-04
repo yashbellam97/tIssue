@@ -1,8 +1,12 @@
 import React from "react";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Header from "./components/Header";
+
 function App() {
     return (
-        <h1>tIssue</h1>
+        <Header />
     );
 }
 
