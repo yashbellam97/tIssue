@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.scss"
@@ -9,11 +10,11 @@ import Signup from "./components/Signup";
 
 function App() {
     return (
-        <div>
+        <Router>
             <Header />
-            <Signup />
-            <Login />
-        </div>
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={Signup} />
+        </Router>
     );
 }
 
