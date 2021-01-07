@@ -6,8 +6,11 @@ import Button from 'react-bootstrap/Button';
 function Issue() {
     return (
         <div>
-            <div className="d-flex flex-wrap align-items-center justify-content-between">
-                <h2 className="mr-5">Issue Title</h2>
+            <div className="d-flex flex-wrap align-items-end justify-content-between">
+                <div className="d-flex flex-wrap align-items-end mr-5">
+                    <h2 className="mr-2 mb-0">Issue Title</h2>
+                    <p className="mb-1">in Project</p>
+                </div>
                 <Button variant="outline-primary" className="text-uppercase text-nowrap">Create New Issue</Button>
             </div>
             <hr className="divider" />
