@@ -7,6 +7,7 @@ import "./App.scss"
 import Header from "./components/Header";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Issue from "./components/Issue";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <div className="container my-5">
                 <Route path="/login" component={Login} />
                 <Route path="/signup" component={Signup} />
+                <Issue />
             </div>
         </Router>
     );

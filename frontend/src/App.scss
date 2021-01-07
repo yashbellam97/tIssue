@@ -1,7 +1,24 @@
-form {
+p {
+    margin: 0;
+}
+
+#login-form, #signup-form {
     width: 23em;
     max-width: 90%;
     padding: 3em;
     border-radius: 2%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.divider {
+    background-color: black;
+}
+
+.issue-metadata {
+    border: 2px solid rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+select {
+    width: fit-content;
 }
