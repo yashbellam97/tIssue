@@ -12,8 +12,10 @@ function App() {
     return (
         <Router>
             <Header />
-            <Route path="/login" component={Login} />
-            <Route path="/signup" component={Signup} />
+            <div className="container my-5">
+                <Route path="/login" component={Login} />
+                <Route path="/signup" component={Signup} />
+            </div>
         </Router>
     );
 }

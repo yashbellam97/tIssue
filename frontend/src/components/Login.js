@@ -5,12 +5,12 @@ import Button from 'react-bootstrap/Button';
 
 function Login() {
     return (
-        <div className="d-flex justify-content-center my-5">
-            <Form>
+        <div className="d-flex justify-content-center">
+            <Form id="login-form">
                 <h2 className="text-center mb-5">Log in</h2>
                 <Form.Group controlId="loginEmail">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" placeholder="username@example.com" required/>
+                    <Form.Control type="email" placeholder="username@example.com" required />
                 </Form.Group>
                 <Form.Group controlId="loginPassword">
                     <Form.Label>Password</Form.Label>

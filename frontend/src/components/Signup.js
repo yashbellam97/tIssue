@@ -5,8 +5,8 @@ import Button from 'react-bootstrap/Button';
 
 function Signup() {
     return (
-        <div className="d-flex justify-content-center my-5">
-            <Form>
+        <div className="d-flex justify-content-center">
+            <Form id="signup-form">
                 <h2 className="text-center mb-5">Sign up</h2>
                 <Form.Group controlId="signupFirstName">
                     <Form.Label>First Name</Form.Label>
