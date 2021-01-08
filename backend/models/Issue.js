@@ -16,6 +16,10 @@ const issueSchema = mongoose.Schema({
         default: "open",
         enum: ["open", "closed"]
     },
+    description: {
+        type: String,
+        trim: true
+    },
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
