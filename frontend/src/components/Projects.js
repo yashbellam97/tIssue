@@ -1,6 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Button from 'react-bootstrap/Button';
+import ListGroup from 'react-bootstrap/ListGroup';
+
+import ProjectListItem from "./ProjectListItem";
 
 function Projects() {
     return (
@@ -15,15 +19,20 @@ function Projects() {
             <hr className="divider" />
 
             <div className="projects">
-                <ul>
-                    <li>Project</li>
-                    <li>Project</li>
-                    <li>Project</li>
-                    <li>Project</li>
-                    <li>Project</li>
-                    <li>Project</li>
-                    <li>Project</li>
-                </ul>
+                <ListGroup>
+                    <ListGroup.Item action onClick={() => console.log("Pressed")}>
+                        <ProjectListItem />
+                    </ListGroup.Item>
+                    <ListGroup.Item action onClick={() => console.log("Pressed")}>
+                        <ProjectListItem />
+                    </ListGroup.Item>
+                    <ListGroup.Item action onClick={() => console.log("Pressed")}>
+                        <ProjectListItem />
+                    </ListGroup.Item>
+                    <ListGroup.Item action onClick={() => console.log("Pressed")}>
+                        <ProjectListItem />
+                    </ListGroup.Item>
+                </ListGroup>
             </div>
         </div>
     );
