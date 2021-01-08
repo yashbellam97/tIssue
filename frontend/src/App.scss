@@ -2,12 +2,23 @@ p {
     margin: 0;
 }
 
+select {
+    width: fit-content;
+}
+
 #login-form, #signup-form {
     width: 23em;
     max-width: 90%;
     padding: 3em;
     border-radius: 2%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#project-form {
+    width: 90em;
+    max-width: 90%;
+    padding: 2em 0;
+    border-radius: 2%;
 }
 
 .divider {
@@ -19,6 +30,10 @@ p {
     border-radius: 10px;
 }
 
-select {
-    width: fit-content;
+.project-list-item {
+    padding: .2em 0;
+
+    .project-name {
+        font-weight: bold;
+    }
 }
