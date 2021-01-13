@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Redirect } from "react-router-dom";
+import bcrypt from "bcryptjs";
 import axios from 'axios';
 
 import { useFormik } from 'formik';
@@ -21,13 +22,16 @@ function Signup() {
         setSignupError("");
         setShowErrorAlert(false);
 
+        let salt = bcrypt.genSaltSync(10);
+        const passwordHash = bcrypt.hashSync("B4c0/\/", salt);
+
         axios.post('http://localhost:5000/api/users/', {
             name: {
                 first: values.firstName,
                 last: values.lastName
             },
             username: values.username,
-            password: values.password
+            password: passwordHash
         })
             .then((response) => {
                 console.log(response);
