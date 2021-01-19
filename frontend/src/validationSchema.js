@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 
-const validationSchema = Yup.object({
+export const signupSchema = Yup.object({
     username: Yup.string()
         .min(5, "Must be at least 5 characters")
         .max(20, "Must be 20 characters or less")
@@ -18,4 +18,12 @@ const validationSchema = Yup.object({
         .required("Required")
 });
 
-export default validationSchema;
+export const loginSchema = Yup.object({
+    username: Yup.string()
+        .min(5, "Must be at least 5 characters")
+        .max(20, "Must be 20 characters or less")
+        .required("Required"),
+    password: Yup.string()
+        .min(8, "Must be at least 8 characters")
+        .required("Required")
+});
