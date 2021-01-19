@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
 
-import validationSchema from "../validationSchema";
+import { signupSchema } from "../validationSchema";
 
 function Signup() {
     const [isLoading, setIsLoading] = useState(false);
@@ -23,7 +23,7 @@ function Signup() {
         setShowErrorAlert(false);
 
         let salt = bcrypt.genSaltSync(10);
-        const passwordHash = bcrypt.hashSync("B4c0/\/", salt);
+        const passwordHash = bcrypt.hashSync(values.password, salt);
 
         axios.post('http://localhost:5000/api/users/', {
             name: {
@@ -34,7 +34,6 @@ function Signup() {
             password: passwordHash
         })
             .then((response) => {
-                console.log(response);
                 setIsLoading(false);
                 setRedirectToNextPage(true);
             })
@@ -61,7 +60,7 @@ function Signup() {
             password: "",
             confirmPassword: ""
         },
-        validationSchema: validationSchema,
+        validationSchema: signupSchema,
         onSubmit: (values) => handleSubmit(values)
     });
 
